@@ -2,7 +2,13 @@ let tela = 0
 let calculated = false
 document.getElementById('tela').innerHTML = tela
 
-
+function limiter(){
+    // Função para limitar o número de caracteres no elemento com id "tela"
+    tela = document.getElementById('tela').innerHTML
+    if (tela.length > 17){
+    document.getElementById('tela').innerHTML = tela.slice(0,17) 
+}
+}
 
 function displaynum(n){
     // Função para exibir os números digitados no elemento com id "tela"
@@ -17,6 +23,7 @@ function displaynum(n){
     else {
         document.getElementById('tela').innerHTML += String(n)
     }
+    limiter()
 }
 function clear_c(){
     // Função para limpar os números do elemento com id "tela"
@@ -42,7 +49,6 @@ function displayop(operator){
 
     // Função para exibir os operadores aritiméticos
     // digitados no elemento com id "tela"
-
     tela = document.getElementById('tela').innerHTML
     
     if ("+-*/".includes(operator.trim().slice(-1)) && !"+-*/".includes(tela.trim().slice(-1))){
@@ -63,6 +69,7 @@ function displayop(operator){
         }
     }
     
+    limiter()
     calculated = false
 
 }

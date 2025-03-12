@@ -47,7 +47,7 @@
 :root{
     --font: 'DogicaPixel', sans-serif;
     --shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-    --shadowinset: inset 0px 1px 10px 5px rgba(0, 0, 0, 0.5);
+    --shadowinset: inset 0px 1px 5px 5px rgba(0, 0, 0, 0.5);
     --textshadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
 }
 
