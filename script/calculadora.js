@@ -5,8 +5,14 @@ document.getElementById('tela').innerHTML = screen
 function limiter(){
     // Função para limitar o número de caracteres no elemento com id "tela"
     screen = document.getElementById('tela').innerHTML
-    if (screen.length > 9){
-    document.getElementById('tela').innerHTML = screen.slice(0,9) 
+    if (window.innerWidth > 650){
+        limit = 25
+    }
+    else {
+        limit = 15
+    }
+    if (screen.length > limit){
+    document.getElementById('tela').innerHTML = screen.slice(0,limit) 
 }
 }
 
@@ -51,7 +57,7 @@ function displayop(operator){
     // digitados no elemento com id "tela"
     screen = document.getElementById('tela').innerHTML
     
-    if ("+-*/".includes(operator.trim().slice(-1)) && !"+-*/".includes(screen.trim().slice(-1))){
+    if ("+-*/.".includes(operator.trim().slice(-1)) && !"+-*/.".includes(screen.trim().slice(-1))){
         if (screen == 0){
             document.getElementById('tela').innerHTML = operator
         }
