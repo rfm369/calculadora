@@ -6,7 +6,7 @@ function limiter(){
     // Função para limitar o número de caracteres no elemento com id "tela"
     tela = document.getElementById('tela').innerHTML
     if (tela.length > 9){
-    document.getElementById('tela').innerHTML = tela.slice(0,17) 
+    document.getElementById('tela').innerHTML = tela.slice(0,9) 
 }
 }
 
