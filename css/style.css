@@ -1,28 +1,12 @@
 @charset "UTF-8";
 
 @font-face {
-    font-family: 'Dogica';
-    src: url('../font/TTF/dogica.ttf') format('truetype'),
-         url('../font/OTF/dogica.otf') format('opentype');
-}
-
-@font-face {
-    font-family: 'DogicaBold';
-    src: url('../font/TTF/dogicabold.ttf') format('truetype'),
-         url('../font/OTF/dogicabold.otf') format('opentype');
-}
-
-@font-face {
     font-family: 'DogicaPixel';
     src: url('../font/TTF/dogicapixel.ttf') format('truetype'),
          url('../font/OTF/dogicapixel.otf') format('opentype');
 }
 
-@font-face {
-    font-family: 'DogicaBoldPixel';
-    src: url('../font/TTF/dogicaboldpixel.ttf') format('truetype'),
-         url('../font/OTF/dogicaboldpixel.otf') format('opentype');
-}
+
 
 @media screen and (max-width: 500px){
     div#calculadora{
