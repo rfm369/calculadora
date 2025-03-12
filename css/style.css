@@ -26,9 +26,10 @@
 
 @media screen and (max-width: 500px){
     div#calculadora{
-
-    display: block;
-    justify-content: center;
+        display: block;
+        justify-content: center;
+        border-radius: 10px;
+        
     }
     
 }
@@ -36,6 +37,8 @@
     div#calculadora{
         display: flex;
         justify-content: center;
+        border-radius: 10px;
+        
     }
 }
 
@@ -57,7 +60,6 @@ body{
 }
 h1{
     font-family: var(--font);
-    text-shadow: var(--textshadow);
     font-size: 1.5em;
     line-height: 1em;
     text-align: center;
@@ -69,13 +71,14 @@ main{
     background-color: #262626;
     max-width: 600px;
     max-height: 800px;
-    margin: 50px auto;
-    border-radius: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
     padding: 20px;
     box-shadow: var(--shadow);
     border-bottom: 15px solid #817372;
-    border-left: 3px solid #817372;
-    border-right: 3px solid #817372;
+    border-left: 5px solid #817372;
+    border-right: 5px solid #817372;
+    border-top: 15px solid #817372 ;
     
 }
 div{
@@ -85,17 +88,20 @@ div{
 p{
     font-family:var(--font);
     font-size: 1.3em;
+    box-shadow: var(--shadowinset);
+    padding: 23px;
+    margin: -20px;
+    border-radius: 20px;
 }
 div.tela{
     background-color: #CFE2E8;
-    text-shadow: var(--textshadow);
     width: 80%;
     height: 20px;
     text-align: right;
     padding: 20px;
     border-radius: 20px;
     margin-bottom: 20px;
-    box-shadow: var(--shadowinset);
+
 
 }
 
@@ -104,32 +110,35 @@ div.botões{
     text-align: center;
     margin: 5px;
 
+    
+
 }
 div.operadores{
     min-width: 50%; 
-    background-color: #ffffff3a;
-    border-radius: 20px;
+    border-radius: 10px;
     text-align: center;
     margin: 5px;
-    box-shadow: var(--shadowinset);
+    /* box-shadow: var(--shadowinset); */
     
 }
 button{
     font-family: var(--font);
+    color: white;
     text-shadow: var(--textshadow);
     width: 90px;
     height: 50px;
     font-size: 1.5em;
     border-radius: 30px;
     margin:3px;
-    background-color: #7D6F6C;
+    background-color: #3A2623;
     box-shadow: var(--shadow);
     border: none;
-    border-bottom: 5px solid #3A2623;
+    border-bottom: 5px solid #7D6F6C;
 
 }
 button.alt{
-    background-color: #BF6F41;
+    background-color: #915431;
+    border-bottom: 5px solid #f89156;
 }
 
 button:active{

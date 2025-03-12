@@ -3,32 +3,36 @@ let calculated = false
 document.getElementById('tela').innerHTML = screen
 
 function limiter(){
-    let limit
     // Função para limitar o número de caracteres no elemento com id "tela"
+    let limit
+    
     screen = document.getElementById('tela').innerHTML
     if (window.innerWidth > 650){
         limit = 25
     }
-    else {
+    else if (window.innerWidth > 350) {
         limit = 15
+    }
+    else {
+        limit = 10
     }
     if (screen.length > limit){
     document.getElementById('tela').innerHTML = screen.slice(0,limit) 
 }
 }
 
-function displaynum(n){
+function displaynum(num){
     // Função para exibir os números digitados no elemento com id "tela"
     screen = document.getElementById('tela').innerHTML
     if(screen == 0){
-        document.getElementById('tela').innerHTML = String(n)       
+        document.getElementById('tela').innerHTML = String(num)       
     }
     else if (calculated == true){
-        document.getElementById('tela').innerHTML = String(n)
+        document.getElementById('tela').innerHTML = String(num)
         calculated = false
     }
     else {
-        document.getElementById('tela').innerHTML += String(n)
+        document.getElementById('tela').innerHTML += String(num)
     }
     limiter()
 }
@@ -39,7 +43,8 @@ function clear_c(){
 }
 
 function clear_ce(){
-    // Função para limpar o último números digitados no elemento com id "tela"
+    // Função para limpar o último números digitados no elemento com 
+    // id "tela"
     screen = document.getElementById('tela').innerHTML.trim()
     if (screen != 0){
         if (screen.length == 1){
@@ -54,11 +59,14 @@ function clear_ce(){
 
 function displayop(operator){
 
-    // Função para exibir os operadores aritiméticos
-    // digitados no elemento com id "tela"
+    // Função para exibir os operadores aritiméticos no elemento 
+    // com id "tela"
     screen = document.getElementById('tela').innerHTML
     
-    if ("+-*/.".includes(operator.trim().slice(-1)) && !"+-*/.".includes(screen.trim().slice(-1))){
+    if ("+-*/.".includes(operator.trim().slice(-1)) &&
+     !"+-*/.".includes(screen.trim().slice(-1)))
+
+     {
         if (screen == 0){
             document.getElementById('tela').innerHTML = operator
         }
@@ -67,7 +75,10 @@ function displayop(operator){
         }
         
     }
-    else if ("()".includes(operator.trim().slice(-1)) && !"()".includes(screen.trim().slice(-1))){
+    else if ("()".includes(operator.trim().slice(-1)) && 
+    !"()".includes(screen.trim().slice(-1)))
+    
+    {
         if(screen == 0){
             document.getElementById('tela').innerHTML = operator
         }
