@@ -3,6 +3,7 @@ let calculated = false
 document.getElementById('tela').innerHTML = screen
 
 function limiter(){
+    let limit
     // Função para limitar o número de caracteres no elemento com id "tela"
     screen = document.getElementById('tela').innerHTML
     if (window.innerWidth > 650){
