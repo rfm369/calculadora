@@ -74,7 +74,6 @@ div{
 p{
     font-family:var(--font);
     font-size: 1.3em;
-    box-shadow: var(--shadowinset);
     padding: 23px;
     margin: -20px;
     border-radius: 20px;
@@ -82,6 +81,7 @@ p{
 
 div.tela{
     background-color: #CFE2E8;
+    box-shadow: var(--shadowinset);
     width: 80%;
     height: 20px;
     text-align: right;
